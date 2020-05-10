@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/quiz.css">
+  <title>Document</title>
+</head>
+<body>
+  <form name="quiz">
+    <p>問題：問題を書く</p>
+    <label><input type="radio" value="yes" name="rBtn">yes</label>
+    <label><input type="radio" value="no" name="rBtn" checked>no</label>
+    <input type="button" value="送信"  onclick="$submit()">
+    <!-- <ul id="lists"></ul> -->
+    <div id="createP"></div>
+  </form>
+  <script src="./js/quiz.js"></script>
+</body>
+</html>

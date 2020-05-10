@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フォームの内容で動作を変える</title>
+  <link href="./practice1.html">
+</head>
+<body>
+  <form name="formChecker">
+    <p>ホーム画面に戻りますか？</p>
+    <label><input type="radio" name="rBtn" value="yes">Yes</label>
+    <label><input type="radio" name="rBtn" value="no" checked>No</label>
+    <input type="button" name="" value="送信" onClick="check()">
+    <input type="text"name="textField" value="ここをクリック" onfocus="javascript:this.select()">
+    </form>
+    <a href="./practice1.html" onmouseover="window.status='自己紹介トップへ';return true;" onmouseout="window.status=''; return true">トップへ</a>
+    <script src="./js/form.js"></script>
+</body>
+</html>

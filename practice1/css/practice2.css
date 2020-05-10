@@ -1,0 +1,18 @@
+#appendList  li{
+  background-color: greenyellow;
+  border-radius: 20%;
+  margin: 5px;
+  border-color: blanchedalmond;
+  color: azure;
+}
+ul {
+  margin: 0;
+}
+li {
+  display: inline-block;
+  background-color: greenyellow;
+  border-radius: 20%;
+  margin: 5px;
+  border-color: blanchedalmond;
+  color: azure;
+}
