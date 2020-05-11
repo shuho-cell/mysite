@@ -19,7 +19,7 @@ goal.setMinutes(59);
 goal.setSeconds(59);
 
 console.log(countDown(goal));
-
+/*
 var counter = countDown(goal);
 var time = `${counter[0]}日${counter[1]}時間${counter[2]}分${counter[3]}秒`;
 const timer = document.getElementById('timer');
@@ -33,3 +33,24 @@ const limitElement = ()=> {
   limit.textContent = productLimit;
 }
 limitElement();
+*/
+var reCalc = function() {
+  var counter = countDown(goal);
+  var time = `${counter[0]}日${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+  var timer2 = document.getElementById('timer2');
+  timer2.textContent = time;
+  refresh();
+}
+var refresh = function() {
+  setTimeout(reCalc, 1000);
+}
+reCalc();
+
+var test = (stn) => {
+  console.log(stn);
+  refresh2()
+}
+var refresh2 = () => {
+setTimeout(test, 1000, "aaaaa");
+  
+}
