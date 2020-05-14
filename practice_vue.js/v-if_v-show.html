@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v-if_ v-show</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+  <div id="app1">
+    <p v-if= "item">ok</p>
+    <p v-else>not ok!</p>
+    <!-- <p v-else>{{message2}}</p> -->
+    <button @click="item = !item">ボタン</button>
+  </div>
+<!-- templateを使う -->
+  <div id="app2">
+    <template v-if="templateIf">
+      <p>あいうえお</p>
+      <p>かきくけこ</p>
+      <p>さしすせそ</p>
+    </template>  
+    <button @click="templateIf = !templateIf">ボタン</button>
+
+  </div>
+
+  <script src="./js/v-if_v-show.js"></script>
+</body>
+</html>
