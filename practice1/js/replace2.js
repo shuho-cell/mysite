@@ -1,26 +1,25 @@
-console.log("----------------");
-const checkClass = document.getElementsByClassName('checkId');
-console.log(checkClass);
-console.log(checkClass.length);
-const checkFunction =()=>{
+const checkClass = document.getElementsByClassName("checkId");
+const checkFunction = () => {
   for (var i = 0; i < checkClass.length; i++) {
-    var rCheck =  document.formName.check[i].checked;
+    var rCheck = document.formName.check[i].checked;
     // console.log(document.formName.check[i].checked);
-    console.log(rCheck);
   }
+};
+
+function attachAddEvent(j) {
+    checkClass[j].addEventListener("click", () => {
+    const label = j + 1;
+    console.log(label + "番がclickされました");
+  });
 }
+
 // console.log(document.formName.check);
-const clickedFunction = ()=>{
-  for (var j = 0; j < checkClass.length; j++){
-    console.log(checkClass[j]);
-    console.log(j);
-    checkClass[j].addEventListener('click' , ()=>{
-      console.log(j +"番がclickされました");
-      console.log(j);
-    })
+const clickedFunction = () => {
+  for (var j = 0; j < checkClass.length; j++) {
+    attachAddEvent(j);
   }
-}
-const checkCheckBox = ()=>{
+};
+const checkCheckBox = () => {
   // checkFunction();
   clickedFunction();
   // if (rCheck) {
@@ -28,7 +27,7 @@ const checkCheckBox = ()=>{
   //   }else {
   //     console.log("-false-");
   //   }
-}
+};
 checkCheckBox();
 
 /*
