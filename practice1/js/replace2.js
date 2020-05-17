@@ -4,11 +4,10 @@ console.log(document.formName.check.length);
 console.log(check);
 const checkLength = document.formName.check.length;
 function attachAddEvent(j) {
-    checkClass[j].addEventListener("click", () => {
+    checkClass[j].addEventListener("change", () => {
     const label = j + 1;
     console.log(label + "番がclickされました");
     var rCheck = document.formName.check[j].checked;
-    var rCheck != rCheck; 
     console.log(document.formName.check[j].checked);
     if (rCheck) {
       checkTrue(j);
@@ -30,7 +29,7 @@ const clickedFunction = () => {
 
 function checkTrue(j) {
   console.log(document.formName.check[j]);
-  append(j);
+  replace(j);
   
 }
 function replace(j) {
