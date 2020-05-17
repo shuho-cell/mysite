@@ -10,9 +10,8 @@
 
 
   <div id="app1">
-    <p v-if= "item">ok</p>
-    <p v-else>not ok!</p>
-    <!-- <p v-else>{{message2}}</p> -->
+    <p v-if= "item">{{message}}</p>
+    <p v-else>{{message2}}</p>
     <button @click="item = !item">ボタン</button>
   </div>
 <!-- templateを使う -->
@@ -23,6 +22,7 @@
       <p>さしすせそ</p>
     </template>  
     <button @click="templateIf = !templateIf">ボタン</button>
+    <button @click="changeMessage">上のメッセージを変えるボタン</button>
 
   </div>
 
