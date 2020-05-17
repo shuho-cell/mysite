@@ -1,15 +1,21 @@
 const checkClass = document.getElementsByClassName("checkId");
-const checkFunction = () => {
-  for (var i = 0; i < checkClass.length; i++) {
-    var rCheck = document.formName.check[i].checked;
-    // console.log(document.formName.check[i].checked);
-  }
-};
-
+const check = document.getElementsByName('check');
+console.log(document.formName.check.length);
+console.log(check);
+const checkLength = document.formName.check.length;
 function attachAddEvent(j) {
     checkClass[j].addEventListener("click", () => {
     const label = j + 1;
     console.log(label + "番がclickされました");
+    var rCheck = document.formName.check[j].checked;
+    var rCheck != rCheck; 
+    console.log(document.formName.check[j].checked);
+    if (rCheck) {
+      checkTrue(j);
+    }else {
+      console.log("-false-");
+      console.log(label);
+    }
   });
 }
 
@@ -19,25 +25,21 @@ const clickedFunction = () => {
     attachAddEvent(j);
   }
 };
-const checkCheckBox = () => {
-  // checkFunction();
+
   clickedFunction();
-  // if (rCheck) {
-  //   console.log("-true-");
-  //   }else {
-  //     console.log("-false-");
-  //   }
-};
-checkCheckBox();
 
-/*
-checkId[1].addEventListener('click' , ()=>{
-  console.log("clickされました");
-})
-*/
-
-// if (rCheck) {
-// console.log("-true-");
-// }else {
-//   console.log("-false-");
-// }
+function checkTrue(j) {
+  console.log(document.formName.check[j]);
+  append(j);
+  
+}
+function replace(j) {
+	var newDiv = document.createElement('div');
+	newDiv.setAttribute('id', 'newList');
+	var newText = document.createTextNode('新しいノードです。');
+	newDiv.appendChild(newText);
+  var pClass = document.getElementsByClassName('pClass');
+  console.log(pClass[j]);
+	var parentNode = pClass[j].parentNode;
+	parentNode.replaceChild(newDiv, pClass[j]);
+}
