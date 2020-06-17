@@ -8,6 +8,7 @@
     <template v-slot:footer>
       <h3>footerのtemplate</h3>
     </template>
+    <template></template>
   </slotPractice1>
 </template>
 

@@ -1,0 +1,33 @@
+@media screen and (max-width: 760px ) {
+  /* header */
+  .title h1 {
+    font-size: 25px;
+  }
+  #headerTop .icons a i {
+    font-size: 20px;
+  }
+  /* topContents */
+
+  .introductionParament {
+    width: 60%;
+    font-size: 19px;
+  }
+} /* @media screen and (max-width: 760px )  */
+@media screen and (max-width: 360px ) {
+  /* header */
+
+  .title {
+    margin-left: 25%;
+  }
+  .title h1 {
+    font-size: 18px;
+  }
+  #headerTop .icons {
+    display: none;
+  }
+  /* topContents */
+  .introductionParament {
+    width: 80%;
+    font-size: 16px;
+  }
+}

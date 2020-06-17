@@ -3,11 +3,13 @@
     <h1 v-focus:solid.round.shadow="{ width: '10px', color: 'red' }">
       ホームです
     </h1>
-    <button @click= "toSkills">
+    <button @click="toSkills">
       skilllsにいく
     </button>
     <h2>数字を数える{{ id }}</h2>
     <button @click="addNumber">次へ</button>
+    <router-link to="./Menu">menuへ実験</router-link>
+    <button @click="toMenu">meuu</button>
   </div>
 </template>
 <script>
@@ -29,15 +31,18 @@ export default {
       }
     },
   },
-  methods:{
-    addNumber(){
+  methods: {
+    addNumber() {
       console.log("--------addNumber");
-      this.id= 3;
+      this.id = 3;
     },
-    toSkills(){
-      this.$router.push({path:'/Skills'});
-    }
+    toSkills() {
+      this.$router.push({ path: "/Skills" });
+    },
+    toMenu() {
+      this.$router.push({ path: "./Menu" });
+    },
   },
-  props:["id"],
+  props: ["id"],
 };
 </script>
