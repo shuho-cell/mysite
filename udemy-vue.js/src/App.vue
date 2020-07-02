@@ -2,6 +2,7 @@
   <div>
     <header>
       <welcome></welcome>
+      <serchBox></serchBox>
     </header>
     <div>
       <p>main contents</p>
@@ -16,9 +17,11 @@
 
 <script>
 import welcome from "./components/header/welcom";
+import serchBox from "./components/serchBox";
 export default {
   components: {
     welcome,
+    serchBox,
   },
 };
 </script>
