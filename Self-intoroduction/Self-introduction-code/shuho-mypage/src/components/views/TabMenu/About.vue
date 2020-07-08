@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <h1>～My profile～</h1>
+    <table>
+      <tr>
+        <th>出身</th>
+        <th>愛知</th>
+      </tr>
+      <tr>
+        <th>出身</th>
+        <th>愛知</th>
+      </tr>
+      <tr>
+        <th>出身</th>
+        <th>愛知</th>
+      </tr>
+    </table>
+  </div>
+</template>
