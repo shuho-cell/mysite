@@ -22,7 +22,6 @@ Vue.component("GlobalName", GlobalName);
 //     el.style.boxShadow="0 2px 5px rgba(0, 0, 0, 0.5)";
 //   }
 // });
-
 new Vue({
   router,
   render: h => h(App),
