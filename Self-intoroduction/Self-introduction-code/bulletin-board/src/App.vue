@@ -2,23 +2,49 @@
   <div id="app">
     <h3>掲示板に投稿する</h3>
     <label for="name">ニックネーム：</label>
-    <input type="text" id="name" v-model="name">
-    <br>
+    <input type="text" id="name" v-model="name" />
+    <br />
     <label for="comment">コメント：</label>
-    <input type="text" id="comment" v-model="comment">
+    <input type="text" id="comment" v-model="comment" />
+    <input type="button" value="データを送信" @click="pushserver" />
   </div>
 </template>
 
 <script>
-
+import axios from "axios";
 export default {
-  data(){
+  data() {
     return {
-      name : "",
+      name: "",
       comment: "",
+    };
+  },
+  methods: {
+    pushserver() {
+      axios.post(
+        "https://firestore.googleapis.com/v1/projects/bulletin-board-shuho/databases/(default)/documents/comments",
+        {
+          fields : {
+            name :{
+              stringValue: this.name
+            },
+            comment:{
+              stringValue : this.comment
+            },
+          }
+        }
+      )
+      .then(response =>{
+        console.log(response);
+      })
+      .catch(error =>{
+        console.log(error);
+      });
+      this.name= "";
+      this.comment="";
     }
   }
-}
+};
 </script>
 
 <style>
