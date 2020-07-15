@@ -6,7 +6,7 @@
     <br />
     <label for="comment">コメント：</label>
     <input type="text" id="comment" v-model="comment" />
-    <input type="button" value="データを送信" @click="pushserver" />
+    <button @click="pushserver">データ送信</button>
   </div>
 </template>
 
@@ -22,7 +22,7 @@ export default {
   methods: {
     pushserver() {
       axios.post(
-        "https://firestore.googleapis.com/v1/projects/bulletin-board-shuho/databases/(default)/documents/comments",
+        "https://firestore.googleapis.com/v1/projects/bulletin-board-shuho/databases/(default)/documents/comment",
         {
           fields : {
             name :{
@@ -40,8 +40,8 @@ export default {
       .catch(error =>{
         console.log(error);
       });
-      this.name= "";
-      this.comment="";
+      this.name= " ";
+      this.comment=" ";
     }
   }
 };
