@@ -16,3 +16,11 @@
 .contents {
   display: flex;
 }
+.instagram {
+  text-align: center;
+  width: 50%;
+  height: 150px;
+  background-image: url("http://cdn.goope.jp/25549/180706081422-5b3ea64ec86da.png");
+  background-size: contain ;
+  background-repeat: no-repeat;
+}
