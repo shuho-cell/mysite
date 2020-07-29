@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./components/Menu/Home";
+import Home from "./views/Home.vue";
 import MySkills from "./components/Skills/MySkills.vue";
 import Contact from "./components/Menu/Contact";
 import Menu from "./components/Menu/Menu.vue";
